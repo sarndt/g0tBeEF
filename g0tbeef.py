@@ -25,7 +25,6 @@
 #capture responses
 #iptables -A FORWARD -p tcp --sport 80 -j QUEUE
 from os import geteuid, system
-from sys import argv
 from time import sleep
 from scapy.all import *
 import nfqueue, socket, threading, asyncore
