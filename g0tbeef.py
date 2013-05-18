@@ -28,7 +28,7 @@ from os import geteuid, system
 from sys import argv
 from time import sleep
 from scapy.all import *
-import nfqueue, socket, threading, asyncore,
+import nfqueue, socket, threading, asyncore
 
 
 class Spoof():
