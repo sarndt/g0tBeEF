@@ -31,6 +31,9 @@ import nfqueue, socket, threading, asyncore
 
 
 class Spoof():
+	# demonstrated by blackhatacademy @ http://blackhatlibrary.net/Python#Scapy
+	# and http://toschprod.wordpress.com/2012/01/31/mitm-4-arp-spoofing-exploit/
+	# more fun with scapy and nfqueue http://5d4a.wordpress.com/2011/08/25/having-fun-with-nfqueue-and-scapy/
 	def get_mac(self,ip):
 		ans,unans=srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst=ip),timeout=5)
 		for snd,rcv in ans:
